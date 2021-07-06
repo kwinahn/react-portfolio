@@ -1,38 +1,319 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*header begin*/
+header {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 999; 
+}
+
+header h1 a {
+  font-family: 'Arial';
+  text-decoration: none;
+  font-size: 60px;
+  margin-left: 40px;
+  margin: 20;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+/*navigation begin*/
+
+header nav {
+  margin: 10px 0;
+  display: flex;
   align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header nav li a {
+  padding: 20px 20px;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+header nav li a:hover {
+  text-decoration: underline;
+}
+
+/*hero start*/
+
+body {
+  margin: 0 auto;
+  font-family: gill sans;
+}
+
+.hero {
+  height: 50vh;
+  color: black;
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+  
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero h2 {
+  font-size: 30px;
+}
+
+.hero img {
+  height: auto;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 70%;
+  filter: opacity(2%);
+}
+
+.hero img:hover{
+  filter:opacity(20%);
+}
+
+
+/*about me start*/
+
+.about-me {
+  background-color: rgb(116, 71, 26);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 40px;
+}
+
+.about-me h2 {
+  font-size: 50px;
+}
+
+.about-me-content  {
+  max-width: 900px;
+}
+
+.about-me p {
+  text-align: center;
+  line-height: 2;
+  font-weight: 200;
+}
+
+/*my work start*/
+.my-work {
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.my-work h1 {
   color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column ;
+  padding-bottom: 0px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cards h3 {
+  color: gray;
+}
+
+.cards img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.cards img:hover {
+  filter: grayscale(0%);
+}
+
+.card {
+  width: 25%;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+
+}
+
+.card:first-child {
+  flex: 1 1 300px;
+  width: 40%;
+}
+
+.card:not(:first-child) {
+  flex: 1 1 200px;
+  max-width: 60%;
+  
+}
+
+/*contact section start*/
+.contact {
+  padding: 30px 30px;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.contact h5 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 60px;
+}
+
+.email {
+  text-align: center;
+  width: 50%;
+}
+
+.email h5 {
+  margin: 0;
+}
+
+
+.email a {
+  text-decoration: none;
+  color: black;
+}
+
+.phone h5 {
+  margin: 0;
+}
+
+.phone {
+  text-align: center;
+  width: 50%;
+}
+
+.phone a {
+  text-decoration: none;
+  color: black;
+}
+
+.phone-email {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 980px) {
+}
+
+
+@media screen and (max-width: 768px) {
+
+/*navigation begin*/
+
+header nav {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header nav li a {
+  padding: 10px 30px;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+}
+
+
+@media screen and (max-width: 575px) {
+  
+  header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      z-index: 999;
+      
   }
-  to {
-    transform: rotate(360deg);
+  
+  header h1 a {
+      font-family: 'Arial';
+      text-decoration: none;
+      font-size: 85px;
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+      margin-left: 30px;
+      }
+  
+  
+  header a {
+      text-decoration: none;
+      color: black;
+      
+      
   }
+  
+  /*navigation begin*/
+  
+  header nav {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+  }
+  
+  header nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      flex-direction: column;
+  }
+  
+  header nav li a {
+      padding: 10px 30px;
+      font-size: 30px;
+      font-weight: lighter;
+  }
+
+  /*about section*/
+
+  .about-me p {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
 }
